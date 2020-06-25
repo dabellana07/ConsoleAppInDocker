@@ -5,6 +5,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppInDocker", "Conso
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F3EB6911-84C8-4B3F-9814-CCE53E76A5D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppInDocker.Models", "ConsoleAppInDocker.Models\ConsoleAppInDocker.Models.csproj", "{06D568D0-55BD-49C3-B5CB-93E2E556E0B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppInDocker.Contracts", "ConsoleAppInDocker.Contracts\ConsoleAppInDocker.Contracts.csproj", "{2E87A27E-D5FA-4E97-952D-CE5BF0A3D25F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppInDocker.Services", "ConsoleAppInDocker.Services\ConsoleAppInDocker.Services.csproj", "{4C47DFA7-5246-471A-96E0-CCE84194FD90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +25,17 @@ Global
 		{F3EB6911-84C8-4B3F-9814-CCE53E76A5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3EB6911-84C8-4B3F-9814-CCE53E76A5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3EB6911-84C8-4B3F-9814-CCE53E76A5D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D568D0-55BD-49C3-B5CB-93E2E556E0B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D568D0-55BD-49C3-B5CB-93E2E556E0B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D568D0-55BD-49C3-B5CB-93E2E556E0B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D568D0-55BD-49C3-B5CB-93E2E556E0B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E87A27E-D5FA-4E97-952D-CE5BF0A3D25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E87A27E-D5FA-4E97-952D-CE5BF0A3D25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E87A27E-D5FA-4E97-952D-CE5BF0A3D25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E87A27E-D5FA-4E97-952D-CE5BF0A3D25F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C47DFA7-5246-471A-96E0-CCE84194FD90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C47DFA7-5246-471A-96E0-CCE84194FD90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C47DFA7-5246-471A-96E0-CCE84194FD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C47DFA7-5246-471A-96E0-CCE84194FD90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

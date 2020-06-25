@@ -10,5 +10,17 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.5" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="3.1.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleAppInDocker.Contracts\ConsoleAppInDocker.Contracts.csproj" />
+    <ProjectReference Include="..\ConsoleAppInDocker.Models\ConsoleAppInDocker.Models.csproj" />
+    <ProjectReference Include="..\ConsoleAppInDocker.Services\ConsoleAppInDocker.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
+    <Folder Include="Data\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>

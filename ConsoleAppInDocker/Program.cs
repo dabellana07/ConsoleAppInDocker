@@ -1,8 +1,15 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using ConsoleAppInDocker.Contracts;
+using ConsoleAppInDocker.Services;
+using ConsoleAppInDocker.Utils;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Nest;
 
 namespace ConsoleAppInDocker
 {
@@ -42,9 +49,46 @@ namespace ConsoleAppInDocker
                 })
                 .Configure<LoggerFilterOptions>(options =>
                 {
-                    options.MinLevel = LogLevel.Debug;
+                    options.MinLevel = Microsoft.Extensions.Logging.LogLevel.Debug;
                 });
+            services.AddSingleton<IExternalLogReader, JsonLogFileReader>();
+            services.AddSingleton<ILogDumperService, LogElasticService>();
             services.AddSingleton<IWorker, Worker>();
+        }
+
+        private static void AddElasticSearch(
+            IServiceCollection services,
+            IConfiguration configuration)
+        {
+            var uri = new Uri(configuration["ElasticSearchConfig:Url"]);
+            var username = configuration["ElasticSearchConfig:Username"];
+            var password = configuration["ElasticSearchConfig:Password"];
+
+            var settings = new ConnectionSettings(uri);
+            settings.BasicAuthentication(username, password);
+            settings.DisableDirectStreaming();
+            settings.OnRequestCompleted(call =>
+            {
+                Debug.WriteLine("Endpoint Called: " + call.Uri);
+
+                if (call.RequestBodyInBytes != null)
+                {
+                    Debug.WriteLine("Request Body: " + Encoding.UTF8.GetString(call.RequestBodyInBytes));
+                }
+
+                if (call.ResponseBodyInBytes != null)
+                {
+                    Debug.WriteLine("Response Body: " + Encoding.UTF8.GetString(call.ResponseBodyInBytes));
+                }
+
+                if (call.ResponseMimeType != null)
+                {
+                    Debug.WriteLine("Response Mime: " + call.ResponseMimeType);
+                }
+            });
+
+            var client = new ElasticClient(settings);
+            services.AddSingleton<IElasticClient>(client);
         }
 
         private static void Init()

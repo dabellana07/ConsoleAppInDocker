@@ -1,0 +1,128 @@
+﻿[
+  {
+    "Id": 100000000001,
+    "Level": "info",
+    "Timestamp": "2020-06-10 07:00:00",
+    "Description": "A record has been added"
+  },
+  {
+    "Id": 100000000002,
+    "Level": "warning",
+    "Timestamp": "2020-06-10 07:00:01",
+    "Description": "Record has missing property"
+  },
+  {
+    "Id": 100000000003,
+    "Level": "error",
+    "Timestamp": "2020-06-10 07:00:02",
+    "Description": "Error saving record"
+  },
+  {
+    "Id": 100000000004,
+    "Level": "info",
+    "Timestamp": "2020-06-10 07:00:03",
+    "Description": "A record has been added"
+  },
+  {
+    "Id": 100000000005,
+    "Level": "warning",
+    "Timestamp": "2020-06-10 07:00:04",
+    "Description": "Record has missing property"
+  },
+  {
+    "Id": 100000000006,
+    "Level": "error",
+    "Timestamp": "2020-06-10 07:00:05",
+    "Description": "Error saving record"
+  },
+  {
+    "Id": 100000000007,
+    "Level": "info",
+    "Timestamp": "2020-06-10 07:00:06",
+    "Description": "A record has been added"
+  },
+  {
+    "Id": 100000000008,
+    "Level": "warning",
+    "Timestamp": "2020-06-10 07:00:07",
+    "Description": "Record has missing property"
+  },
+  {
+    "Id": 100000000009,
+    "Level": "error",
+    "Timestamp": "2020-06-10 07:00:08",
+    "Description": "Error saving record"
+  },
+  {
+    "Id": 100000000010,
+    "Level": "info",
+    "Timestamp": "2020-06-10 07:00:09",
+    "Description": "A record has been added"
+  },
+  {
+    "Id": 100000000011,
+    "Level": "warning",
+    "Timestamp": "2020-06-10 07:00:10",
+    "Description": "Record has missing property"
+  },
+  {
+    "Id": 100000000012,
+    "Level": "error",
+    "Timestamp": "2020-06-10 07:00:11",
+    "Description": "Error saving record"
+  },
+  {
+    "Id": 100000000013,
+    "Level": "info",
+    "Timestamp": "2020-06-10 07:00:12",
+    "Description": "A record has been added"
+  },
+  {
+    "Id": 100000000014,
+    "Level": "warning",
+    "Timestamp": "2020-06-10 07:00:13",
+    "Description": "Record has missing property"
+  },
+  {
+    "Id": 100000000015,
+    "Level": "error",
+    "Timestamp": "2020-06-10 07:00:14",
+    "Description": "Error saving record"
+  },
+  {
+    "Id": 100000000016,
+    "Level": "info",
+    "Timestamp": "2020-06-10 07:00:15",
+    "Description": "A record has been added"
+  },
+  {
+    "Id": 100000000017,
+    "Level": "warning",
+    "Timestamp": "2020-06-10 07:00:16",
+    "Description": "Record has missing property"
+  },
+  {
+    "Id": 100000000018,
+    "Level": "error",
+    "Timestamp": "2020-06-10 07:00:17",
+    "Description": "Error saving record"
+  },
+  {
+    "Id": 100000000019,
+    "Level": "info",
+    "Timestamp": "2020-06-10 07:00:18",
+    "Description": "A record has been added"
+  },
+  {
+    "Id": 100000000020,
+    "Level": "warning",
+    "Timestamp": "2020-06-10 07:00:19",
+    "Description": "Record has missing property"
+  },
+  {
+    "Id": 100000000021,
+    "Level": "error",
+    "Timestamp": "2020-06-10 07:00:20",
+    "Description": "Error saving record"
+  }
+]
