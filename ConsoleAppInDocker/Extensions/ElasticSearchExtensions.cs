@@ -9,7 +9,7 @@ namespace ConsoleAppInDocker.Extensions
 {
     public static class ElasticSearchExtensions
     {
-        public static void AddElasticSearch(this IServiceCollection services, IConfiguration configuration)
+        public static void AddElasticSearch(this IServiceCollection services, IConfigurationRoot configuration)
         {
             var uri = new Uri(configuration["ElasticSearchConfig:Url"]);
             var username = configuration["ElasticSearchConfig:Username"];

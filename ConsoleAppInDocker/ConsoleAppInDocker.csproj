@@ -12,6 +12,8 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.5" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="3.1.5" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.5" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConsoleAppInDocker.Contracts\ConsoleAppInDocker.Contracts.csproj" />
@@ -22,5 +24,10 @@
     <Folder Include="Utils\" />
     <Folder Include="Data\" />
     <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
