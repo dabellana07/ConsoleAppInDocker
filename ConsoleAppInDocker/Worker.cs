@@ -16,7 +16,7 @@ namespace ConsoleAppInDocker
 
         public Worker(
             ILogger<Worker> logger,
-            IConfiguration configuration,
+            IConfigurationRoot configuration,
             IExternalLogReader logReader,
             ILogDumperService logDumperService
         )

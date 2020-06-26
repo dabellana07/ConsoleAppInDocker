@@ -20,12 +20,9 @@ namespace ConsoleAppInDocker
         static ServiceProvider _serviceProvider;
         static ILogger<Program> _logger;
         static CancellationTokenSource _cancellationTokenSource;
-        static IConfigurationRoot _configuration;
 
         static async Task Main(string[] args)
         {
-            _configuration = GetAppConfiguration();
-
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
 
@@ -54,6 +51,9 @@ namespace ConsoleAppInDocker
 
         private static void ConfigureServices(IServiceCollection services)
         {
+            var appConfig = GetAppConfiguration();
+
+            services.AddSingleton(appConfig);
             services
                 .AddLogging(options =>
                 {
@@ -63,7 +63,7 @@ namespace ConsoleAppInDocker
                 {
                     options.MinLevel = Microsoft.Extensions.Logging.LogLevel.Debug;
                 });
-            services.AddElasticSearch(_configuration);
+            services.AddElasticSearch(appConfig);
             services.AddSingleton<IExternalLogReader, JsonLogFileReader>();
             services.AddSingleton<ILogDumperService, LogElasticService>();
             services.AddSingleton<IWorker, Worker>();
