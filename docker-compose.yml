@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   consoleappindocker:
-    image: ${DOCKER_REGISTRY-}consoleappindocker
+    image: dabellana/consoleappindocker
     build:
       context: .
       dockerfile: ConsoleAppInDocker/Dockerfile
